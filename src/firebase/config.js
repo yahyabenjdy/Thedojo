@@ -1,14 +1,15 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
+import "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB3Aa5wKRs4BrB50FjUNrfvzHkaw2RZet0",
-  authDomain: "thedojo-61480.firebaseapp.com",
-  projectId: "thedojo-61480",
-  storageBucket: "thedojo-61480.appspot.com",
-  messagingSenderId: "912188563409",
-  appId: "1:912188563409:web:fd9c90d14c25a9a17c4af0",
+  apiKey: "AIzaSyDXBeEYHuAA42LMCkxhdsOoYdMO2n7tgos",
+  authDomain: "udemy-files-dojo.firebaseapp.com",
+  projectId: "udemy-files-dojo",
+  storageBucket: "udemy-files-dojo.appspot.com",
+  messagingSenderId: "244633033606",
+  appId: "1:244633033606:web:aa1833bda9c7906227ea07",
 };
 
 // init firebase
@@ -17,8 +18,9 @@ firebase.initializeApp(firebaseConfig);
 // init services
 const projectFirestore = firebase.firestore();
 const projectAuth = firebase.auth();
+const projectStorage = firebase.storage();
 
 // timestamp
 const timestamp = firebase.firestore.Timestamp;
 
-export { projectFirestore, projectAuth, timestamp };
+export { projectFirestore, projectAuth, timestamp, projectStorage };
